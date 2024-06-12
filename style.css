@@ -1,0 +1,76 @@
+:root {
+  --font-size-1: 12px;
+  --font-size-2: 13px;
+  --font-size-3: 15px;
+  --font-size-4: 17px;
+  --font-size-5: 19px;
+  --font-size-6: 21px;
+  --font-size-7: 24px;
+  --font-size-8: 27px;
+  --font-size-9: 30px;
+  --font-size-10: 34px;
+}
+
+@media (width <= 640px) {
+  :root {
+    --font-size-sm: var(--font-size-1);
+    --font-size-base: var(--font-size-3);
+    --font-size-lg: var(--font-size-5);
+    --font-size-xl: var(--font-size-7);
+  }
+}
+
+@media (640px < width < 960px) {
+  :root {
+    --font-size-sm: var(--font-size-2);
+    --font-size-base: var(--font-size-4);
+    --font-size-lg: var(--font-size-6);
+    --font-size-xl: var(--font-size-9);
+  }
+}
+
+@media (960px <= width) {
+  :root {
+    --font-size-sm: var(--font-size-2);
+    --font-size-base: var(--font-size-4);
+    --font-size-lg: var(--font-size-7);
+    --font-size-xl: var(--font-size-10);
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.body {
+  font-family: "Noto Sans JP", sans-serif;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+
+.main {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+  max-width: 800px;
+}
+
+.text-xl {
+  font-size: var(--font-size-xl);
+}
+
+.text-lg {
+  font-size: var(--font-size-lg);
+}
+
+.text-base {
+  font-size: var(--font-size-base);
+}
+
+.text-sm {
+  font-size: var(--font-size-sm);
+}
